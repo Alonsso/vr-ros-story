@@ -10455,7 +10455,7 @@ PrefabInstance:
       propertyPath: m_text
       value: "Para desplazarte acciona el gatillo del debo indice de tu mano derecha
         o izquierda, Luego, apunta hacia donde deseas moverte, sueltalo para realizar
-        el movimiento. \n\nPuedes moverte a puntos de interes marcado por la flecha
+        el movimiento. \n\nPuedes moverte a puntos de interes marcados con una flecha
         verde.\n\nCuando el rayo l\xE1ser sea de color rojo significa que el movimiento
         es inv\xE1lido.\n\n\xA1Vamos!"
       objectReference: {fileID: 0}
