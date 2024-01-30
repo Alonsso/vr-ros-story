@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30843848, g: 0.32388955, b: 0.3228867, a: 1}
+  m_IndirectSpecularColor: {r: 0.30858725, g: 0.32396066, b: 0.3226863, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -733,6 +733,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 218804915}
     m_Modifications:
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: audioSrc
+      value: 
+      objectReference: {fileID: 251401407}
     - target: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -813,7 +817,6 @@ GameObject:
   m_Component:
   - component: {fileID: 127597362}
   - component: {fileID: 127597365}
-  - component: {fileID: 127597364}
   - component: {fileID: 127597363}
   m_Layer: 0
   m_Name: HoverSound
@@ -853,7 +856,7 @@ MonoBehaviour:
   _whenHover:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 127597364}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -886,18 +889,6 @@ MonoBehaviour:
   _whenSelectingInteractorViewRemoved:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &127597364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127597361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &127597365
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1062,6 +1053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 131381916}
+  animator: {fileID: 1821793963}
 --- !u!82 &131381916
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1072,7 +1064,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aae46f7c71451b54384b4e16f45fa74b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 629372ec2d5c87b49a05ccab938848ee, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1226,6 +1218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 146020264}
+  animator: {fileID: 1775988779}
 --- !u!82 &146020264
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1236,7 +1229,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2a1b1e6f2b8f48c4581a45a06848913f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 514671f60daaa634e8837e09bf80c62b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1664,7 +1657,7 @@ MonoBehaviour:
   _whenActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1910760186}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -1679,7 +1672,7 @@ MonoBehaviour:
   _whenDeactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1251029957}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -2199,7 +2192,6 @@ GameObject:
   m_Component:
   - component: {fileID: 222740969}
   - component: {fileID: 222740971}
-  - component: {fileID: 222740970}
   m_Layer: 0
   m_Name: AudioTurnRight
   m_TagString: Untagged
@@ -2222,18 +2214,6 @@ Transform:
   m_Father: {fileID: 1465258314}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &222740970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 222740968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &222740971
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2726,6 +2706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 251401407}
+  animator: {fileID: 1018821124}
 --- !u!82 &251401407
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2736,7 +2717,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f758d6e2bd5f9e2499d56d455fdaa952, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c36417ab9056ca548b9ff09b70c0e416, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2894,10 +2875,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 263349129}
-  - component: {fileID: 263349134}
-  - component: {fileID: 263349133}
-  - component: {fileID: 263349132}
-  - component: {fileID: 263349131}
   - component: {fileID: 263349130}
   m_Layer: 0
   m_Name: Audio
@@ -3017,54 +2994,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &263349131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263349128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c686f13208596eb4b8272d78e582aec9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &263349132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263349128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c686f13208596eb4b8272d78e582aec9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &263349133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263349128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c686f13208596eb4b8272d78e582aec9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &263349134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263349128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f47d10845aedc409ea9f6cec618b5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &280548782
 GameObject:
   m_ObjectHideFlags: 0
@@ -3075,7 +3004,6 @@ GameObject:
   m_Component:
   - component: {fileID: 280548783}
   - component: {fileID: 280548786}
-  - component: {fileID: 280548785}
   - component: {fileID: 280548784}
   m_Layer: 0
   m_Name: HoverSound
@@ -3115,7 +3043,7 @@ MonoBehaviour:
   _whenHover:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 280548785}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -3148,18 +3076,6 @@ MonoBehaviour:
   _whenSelectingInteractorViewRemoved:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &280548785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280548782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &280548786
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3264,6 +3180,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 420016251}
     m_Modifications:
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: audioSrc
+      value: 
+      objectReference: {fileID: 563905709}
     - target: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3402,6 +3322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 317279739}
+  animator: {fileID: 897094316}
 --- !u!82 &317279739
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3412,7 +3333,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b0a42c8e78efef9489983fa5eedf1555, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ef02c1c6c7752c74dbd8cef998690e79, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3541,7 +3462,6 @@ GameObject:
   m_Component:
   - component: {fileID: 345887437}
   - component: {fileID: 345887440}
-  - component: {fileID: 345887439}
   - component: {fileID: 345887438}
   m_Layer: 0
   m_Name: HoverSound
@@ -3581,7 +3501,7 @@ MonoBehaviour:
   _whenHover:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 345887439}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -3614,18 +3534,6 @@ MonoBehaviour:
   _whenSelectingInteractorViewRemoved:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &345887439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345887436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &345887440
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4274,6 +4182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 356512040}
+  animator: {fileID: 2134765417}
 --- !u!82 &356512040
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4284,7 +4193,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 323ab1b81ecaff341a94c2107519042d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: aaa9c3e38f2d7874589039ca45cb4489, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4380,7 +4289,6 @@ GameObject:
   m_Component:
   - component: {fileID: 365033292}
   - component: {fileID: 365033295}
-  - component: {fileID: 365033294}
   - component: {fileID: 365033293}
   m_Layer: 0
   m_Name: HoverSound
@@ -4420,7 +4328,7 @@ MonoBehaviour:
   _whenHover:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 365033294}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -4453,18 +4361,6 @@ MonoBehaviour:
   _whenSelectingInteractorViewRemoved:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &365033294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 365033291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &365033295
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5060,6 +4956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 453074829}
+  animator: {fileID: 548084280}
 --- !u!82 &453074829
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5070,7 +4967,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ba83b6183c15f294f989d058356f27b9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: af08eb5dcdd18c3499dccc97cd4497cb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5642,6 +5539,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 718980235}
     m_Modifications:
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: audioSrc
+      value: 
+      objectReference: {fileID: 453074829}
     - target: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5710,6 +5611,11 @@ PrefabInstance:
 --- !u!4 &548084279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+  m_PrefabInstance: {fileID: 548084278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &548084280 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8183731813024506158, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
   m_PrefabInstance: {fileID: 548084278}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &555222700
@@ -5912,6 +5818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 563905709}
+  animator: {fileID: 635085086}
 --- !u!82 &563905709
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5922,7 +5829,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1f7a262962b77074daf446609edeeea3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 67c1216189b9cee44bf81701b2097172, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -6393,7 +6300,6 @@ GameObject:
   m_Component:
   - component: {fileID: 604792723}
   - component: {fileID: 604792725}
-  - component: {fileID: 604792724}
   m_Layer: 0
   m_Name: AudioEnter
   m_TagString: Untagged
@@ -6416,18 +6322,6 @@ Transform:
   m_Father: {fileID: 1097122163}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &604792724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604792722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &604792725
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6592,6 +6486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 606358983}
+  animator: {fileID: 1996340960}
 --- !u!82 &606358983
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6602,7 +6497,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b95c6b69ea30dcc49ac0ed8f5ed6401a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 640ebb0bb7916b144820ce6ef3cbf984, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -6776,7 +6671,6 @@ GameObject:
   m_Component:
   - component: {fileID: 628402006}
   - component: {fileID: 628402009}
-  - component: {fileID: 628402008}
   - component: {fileID: 628402007}
   m_Layer: 0
   m_Name: HoverSound
@@ -6816,7 +6710,7 @@ MonoBehaviour:
   _whenHover:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 628402008}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -6849,18 +6743,6 @@ MonoBehaviour:
   _whenSelectingInteractorViewRemoved:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &628402008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628402005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &628402009
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7023,6 +6905,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4867528393344068, guid: 1237551950c246d43ab02b1d69e6f317, type: 3}
   m_PrefabInstance: {fileID: 631164157}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &635085086 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8183731813024506158, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+  m_PrefabInstance: {fileID: 300183959}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &654159985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7114,7 +7001,6 @@ GameObject:
   m_Component:
   - component: {fileID: 659517183}
   - component: {fileID: 659517186}
-  - component: {fileID: 659517185}
   - component: {fileID: 659517184}
   m_Layer: 0
   m_Name: HoverSound
@@ -7154,7 +7040,7 @@ MonoBehaviour:
   _whenHover:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 659517185}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -7187,18 +7073,6 @@ MonoBehaviour:
   _whenSelectingInteractorViewRemoved:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &659517185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659517182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &659517186
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7796,7 +7670,6 @@ GameObject:
   m_Component:
   - component: {fileID: 686943214}
   - component: {fileID: 686943217}
-  - component: {fileID: 686943216}
   - component: {fileID: 686943215}
   m_Layer: 0
   m_Name: HoverSound
@@ -7836,7 +7709,7 @@ MonoBehaviour:
   _whenHover:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 686943216}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -7869,18 +7742,6 @@ MonoBehaviour:
   _whenSelectingInteractorViewRemoved:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &686943216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 686943213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &686943217
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8347,7 +8208,6 @@ GameObject:
   m_Component:
   - component: {fileID: 708687685}
   - component: {fileID: 708687688}
-  - component: {fileID: 708687687}
   - component: {fileID: 708687686}
   m_Layer: 0
   m_Name: HoverSound
@@ -8387,7 +8247,7 @@ MonoBehaviour:
   _whenHover:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 708687687}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -8420,18 +8280,6 @@ MonoBehaviour:
   _whenSelectingInteractorViewRemoved:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &708687687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708687684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &708687688
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9015,6 +8863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 753718710}
+  animator: {fileID: 1608994526}
 --- !u!82 &753718710
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9025,7 +8874,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2de5280d13f4ede4e949859029f707c4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 639dc2f99090ab34aaca50e3d798f5d8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -9187,7 +9036,6 @@ GameObject:
   m_Component:
   - component: {fileID: 767107153}
   - component: {fileID: 767107155}
-  - component: {fileID: 767107154}
   m_Layer: 0
   m_Name: AudioTurnLeft
   m_TagString: Untagged
@@ -9210,18 +9058,6 @@ Transform:
   m_Father: {fileID: 1783558787}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &767107154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767107152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &767107155
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9328,7 +9164,6 @@ GameObject:
   m_Component:
   - component: {fileID: 780165728}
   - component: {fileID: 780165730}
-  - component: {fileID: 780165729}
   m_Layer: 0
   m_Name: AudioTurnLeft
   m_TagString: Untagged
@@ -9351,18 +9186,6 @@ Transform:
   m_Father: {fileID: 1083879766}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &780165729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 780165727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &780165730
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9599,6 +9422,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1805893496}
     m_Modifications:
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: audioSrc
+      value: 
+      objectReference: {fileID: 753718710}
     - target: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9848,6 +9675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 852023457}
+  animator: {fileID: 2041593789}
 --- !u!82 &852023457
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9858,7 +9686,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6661abfe4a5bc354197fc76e5708a954, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fd24c1ab0ba3efa4e84c8af782a2676b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -9954,7 +9782,6 @@ GameObject:
   m_Component:
   - component: {fileID: 864623817}
   - component: {fileID: 864623819}
-  - component: {fileID: 864623818}
   m_Layer: 0
   m_Name: AudioTurnLeft
   m_TagString: Untagged
@@ -9977,18 +9804,6 @@ Transform:
   m_Father: {fileID: 1465258314}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &864623818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864623816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &864623819
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10200,7 +10015,6 @@ GameObject:
   m_Component:
   - component: {fileID: 883984743}
   - component: {fileID: 883984746}
-  - component: {fileID: 883984745}
   - component: {fileID: 883984744}
   m_Layer: 0
   m_Name: HoverSound
@@ -10240,7 +10054,7 @@ MonoBehaviour:
   _whenHover:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 883984745}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -10273,18 +10087,6 @@ MonoBehaviour:
   _whenSelectingInteractorViewRemoved:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &883984745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883984742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &883984746
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10389,6 +10191,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1957394104}
     m_Modifications:
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: audioSrc
+      value: 
+      objectReference: {fileID: 317279739}
     - target: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -10457,6 +10263,11 @@ PrefabInstance:
 --- !u!4 &897094315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+  m_PrefabInstance: {fileID: 897094314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &897094316 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8183731813024506158, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
   m_PrefabInstance: {fileID: 897094314}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &898097423
@@ -11612,6 +11423,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8847920339368120752, guid: fe7f10c2beb14814fa3dac1db4b24de1, type: 3}
   m_PrefabInstance: {fileID: 1717015317}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1018821124 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8183731813024506158, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+  m_PrefabInstance: {fileID: 119681808}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1044435458
 GameObject:
   m_ObjectHideFlags: 0
@@ -12211,7 +12027,7 @@ MonoBehaviour:
   _whenTurnDirectionLeft:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 780165729}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.OVR.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -12226,7 +12042,7 @@ MonoBehaviour:
   _whenTurnDirectionRight:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1842105104}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.OVR.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -12353,7 +12169,7 @@ MonoBehaviour:
   _whenActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 604792724}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -13229,7 +13045,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1144753671}
   - component: {fileID: 1144753674}
-  - component: {fileID: 1144753673}
   - component: {fileID: 1144753672}
   m_Layer: 0
   m_Name: HoverSound
@@ -13269,7 +13084,7 @@ MonoBehaviour:
   _whenHover:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1144753673}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -13302,18 +13117,6 @@ MonoBehaviour:
   _whenSelectingInteractorViewRemoved:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1144753673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144753670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1144753674
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13418,6 +13221,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 662074783}
     m_Modifications:
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: audioSrc
+      value: 
+      objectReference: {fileID: 131381916}
     - target: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -13897,7 +13704,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1251029956}
   - component: {fileID: 1251029958}
-  - component: {fileID: 1251029957}
   m_Layer: 0
   m_Name: AudioExit
   m_TagString: Untagged
@@ -13920,18 +13726,6 @@ Transform:
   m_Father: {fileID: 175624017}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1251029957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251029955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1251029958
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14220,7 +14014,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5a1806d219bc28343840c9ef5574df25, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6e2ba9b43f88e3d41b0dee9e74e5eb26, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -14340,6 +14134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1280749053}
+  animator: {fileID: 1689497619}
 --- !u!1001 &1289273153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14513,7 +14308,7 @@ MonoBehaviour:
   _whenActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1542967136}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -16227,7 +16022,7 @@ MonoBehaviour:
   _whenActivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2075675370}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -16242,7 +16037,7 @@ MonoBehaviour:
   _whenDeactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1948511067}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -16530,7 +16325,7 @@ MonoBehaviour:
   _whenTurnDirectionLeft:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 864623818}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.OVR.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -16545,7 +16340,7 @@ MonoBehaviour:
   _whenTurnDirectionRight:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 222740970}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.OVR.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -17138,7 +16933,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1542967135}
   - component: {fileID: 1542967137}
-  - component: {fileID: 1542967136}
   m_Layer: 0
   m_Name: AudioEnter
   m_TagString: Untagged
@@ -17161,18 +16955,6 @@ Transform:
   m_Father: {fileID: 1298058033}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1542967136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542967134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1542967137
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17476,7 +17258,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1586626182}
   - component: {fileID: 1586626185}
-  - component: {fileID: 1586626184}
   - component: {fileID: 1586626183}
   m_Layer: 0
   m_Name: HoverSound
@@ -17516,7 +17297,7 @@ MonoBehaviour:
   _whenHover:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1586626184}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -17549,18 +17330,6 @@ MonoBehaviour:
   _whenSelectingInteractorViewRemoved:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1586626184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1586626181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1586626185
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17756,6 +17525,11 @@ Transform:
   m_Father: {fileID: 1309450532}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
+--- !u!95 &1608994526 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8183731813024506158, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+  m_PrefabInstance: {fileID: 808223094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1633168418
 GameObject:
   m_ObjectHideFlags: 0
@@ -17935,6 +17709,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2002858297}
     m_Modifications:
+    - target: {fileID: 1326348178104846189, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_Name
+      value: Personaje_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: audioSrc
+      value: 
+      objectReference: {fileID: 1280749053}
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: sampleSize
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: playheadBias
+      value: 2205
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: warnOnNullRefs
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: inspGoOriginalName
+      value: Personaje_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: doEditorConfigPreview
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -17991,9 +17793,77 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2985094238369277125, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[7]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985094238369277125, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[66]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985094238369277125, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[67]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985094238369277125, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[80]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985094238369277125, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[81]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985094238369277125, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[82]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985094238369277125, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[83]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3836773286074974118, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
       propertyPath: m_Name
       value: Rosangela
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559778088374385795, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559778088374385795, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559778088374385795, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559778088374385795, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0000123600075
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559778088374385795, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559778088374385795, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00024372913
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559778088374385795, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00009720833
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064490319831677026, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[8]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064490319831677026, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[15]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183731813024506158, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18003,6 +17873,11 @@ PrefabInstance:
 --- !u!4 &1689497618 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+  m_PrefabInstance: {fileID: 1689497617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1689497619 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8183731813024506158, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
   m_PrefabInstance: {fileID: 1689497617}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1690866309
@@ -18926,7 +18801,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1754855835}
   - component: {fileID: 1754855838}
-  - component: {fileID: 1754855837}
   - component: {fileID: 1754855836}
   m_Layer: 0
   m_Name: HoverSound
@@ -18966,7 +18840,7 @@ MonoBehaviour:
   _whenHover:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1754855837}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -18999,18 +18873,6 @@ MonoBehaviour:
   _whenSelectingInteractorViewRemoved:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1754855837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1754855834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1754855838
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19370,6 +19232,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 466302024}
     m_Modifications:
+    - target: {fileID: 1326348178104846189, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_Name
+      value: Personaje_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: audioSrc
+      value: 
+      objectReference: {fileID: 146020264}
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: playheadBias
+      value: 2400
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: inspGoOriginalName
+      value: Personaje_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: doEditorConfigPreview
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -19426,9 +19308,77 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2985094238369277125, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[7]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985094238369277125, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[66]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985094238369277125, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[67]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985094238369277125, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[80]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985094238369277125, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[81]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985094238369277125, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[82]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985094238369277125, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[83]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985094238369277125, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[124]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3836773286074974118, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
       propertyPath: m_Name
       value: Rosangela
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559778088374385795, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559778088374385795, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559778088374385795, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559778088374385795, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0000123600075
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559778088374385795, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559778088374385795, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00024372913
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559778088374385795, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00009720833
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064490319831677026, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[8]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064490319831677026, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[15]
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19440,6 +19390,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
   m_PrefabInstance: {fileID: 1775988777}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1775988779 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8183731813024506158, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+  m_PrefabInstance: {fileID: 1775988777}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1776722743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19448,6 +19403,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 920025367}
     m_Modifications:
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: audioSrc
+      value: 
+      objectReference: {fileID: 606358983}
     - target: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -19568,7 +19527,7 @@ MonoBehaviour:
   _whenTurnDirectionLeft:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 767107154}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.OVR.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -19583,7 +19542,7 @@ MonoBehaviour:
   _whenTurnDirectionRight:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2052621607}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.OVR.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -20103,6 +20062,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4946735294245968510, guid: 3181eb930f38eb7478bc2a19f785a48f, type: 3}
   m_PrefabInstance: {fileID: 1813270114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1821793963 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8183731813024506158, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+  m_PrefabInstance: {fileID: 1159167858}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1826769050
 GameObject:
@@ -20743,7 +20707,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1842105103}
   - component: {fileID: 1842105105}
-  - component: {fileID: 1842105104}
   m_Layer: 0
   m_Name: AudioTurnRight
   m_TagString: Untagged
@@ -20766,18 +20729,6 @@ Transform:
   m_Father: {fileID: 1083879766}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1842105104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842105102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1842105105
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21008,7 +20959,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1896852171}
   - component: {fileID: 1896852174}
-  - component: {fileID: 1896852173}
   - component: {fileID: 1896852172}
   m_Layer: 0
   m_Name: HoverSound
@@ -21048,7 +20998,7 @@ MonoBehaviour:
   _whenHover:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1896852173}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
@@ -21081,18 +21031,6 @@ MonoBehaviour:
   _whenSelectingInteractorViewRemoved:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1896852173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896852170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1896852174
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21199,7 +21137,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1910760185}
   - component: {fileID: 1910760187}
-  - component: {fileID: 1910760186}
   m_Layer: 0
   m_Name: AudioEnter
   m_TagString: Untagged
@@ -21222,18 +21159,6 @@ Transform:
   m_Father: {fileID: 175624017}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1910760186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1910760184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1910760187
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21498,7 +21423,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1948511066}
   - component: {fileID: 1948511068}
-  - component: {fileID: 1948511067}
   m_Layer: 0
   m_Name: AudioExit
   m_TagString: Untagged
@@ -21521,18 +21445,6 @@ Transform:
   m_Father: {fileID: 1443319131}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1948511067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948511065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1948511068
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21979,6 +21891,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4946735294245968510, guid: 3181eb930f38eb7478bc2a19f785a48f, type: 3}
   m_PrefabInstance: {fileID: 1957394103}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1996340960 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8183731813024506158, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+  m_PrefabInstance: {fileID: 1776722743}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2002858296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22329,6 +22246,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1358608162}
     m_Modifications:
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: audioSrc
+      value: 
+      objectReference: {fileID: 852023457}
     - target: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -22397,6 +22318,11 @@ PrefabInstance:
 --- !u!4 &2041593788 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+  m_PrefabInstance: {fileID: 2041593787}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2041593789 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8183731813024506158, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
   m_PrefabInstance: {fileID: 2041593787}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2043632564
@@ -22597,7 +22523,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2052621606}
   - component: {fileID: 2052621608}
-  - component: {fileID: 2052621607}
   m_Layer: 0
   m_Name: AudioTurnRight
   m_TagString: Untagged
@@ -22620,18 +22545,6 @@ Transform:
   m_Father: {fileID: 1783558787}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2052621607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052621605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &2052621608
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22738,7 +22651,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2075675369}
   - component: {fileID: 2075675371}
-  - component: {fileID: 2075675370}
   m_Layer: 0
   m_Name: AudioEnter
   m_TagString: Untagged
@@ -22761,18 +22673,6 @@ Transform:
   m_Father: {fileID: 1443319131}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2075675370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075675368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &2075675371
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23238,6 +23138,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1071035044}
     m_Modifications:
+    - target: {fileID: 2621282857666205675, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+      propertyPath: audioSrc
+      value: 
+      objectReference: {fileID: 356512040}
     - target: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -23306,6 +23210,11 @@ PrefabInstance:
 --- !u!4 &2134765416 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2744923732953284283, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
+  m_PrefabInstance: {fileID: 2134765415}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2134765417 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8183731813024506158, guid: f8f8192327f8c67438729ab2db28fda9, type: 3}
   m_PrefabInstance: {fileID: 2134765415}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4392814984924383813
