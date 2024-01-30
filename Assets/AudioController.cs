@@ -3,19 +3,26 @@ using UnityEngine;
 public class AudioController : MonoBehaviour
 {
     public AudioSource audioSource;
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("ALVV ?????????????");
-    }
+    public Animator animator;
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Si entraa >>>>>>>");
+        animator.SetBool("Talking", true);
     }
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Stop audio Trigger >>>>>>");
         audioSource.Stop();
+        animator.SetBool("Talking", false);
+    }
+    private void Start()
+    {
+        animator.gameObject.SetActive(true);
+    }
+    private void Update()
+    {
+        if (!audioSource.isPlaying)
+        {
+            animator.SetBool("Talking", false);
+        }
     }
 }
